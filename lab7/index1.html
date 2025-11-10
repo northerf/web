@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание 1 - Смена цвета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: color 0.3s ease;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        @media screen and (min-width: 801px) {
+            body {
+                color: #000000;
+                background-color: #f0f0f0;
+            }
+        }
+        @media screen and (min-width: 481px) and (max-width: 800px) {
+            body {
+                color: #0066cc;
+                background-color: #e8f4f8;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            body {
+                color: #cc0000;
+                background-color: #ffe8e8;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Текст будет разного цвета в зависимости от размера экрана</h1>
+    <p>Текст будет разного цвета в зависимости от размера экрана. Точки: 480px, 800px.</p>
+    <ul>
+        <li>Больше 800px: черный текст</li>
+        <li>480px-800px: синий текст</li>
+        <li>Меньше 480px: красный текст</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Адаптивная страница с обезьянкой</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #ffffff;
+            transition: color 0.3s ease;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: normal;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 2px solid #4a7c59;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card img {
+            width: 250px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            text-align: justify;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Декстоп - 3 колонки, 2 ряда, ЧЕРНЫЙ текст */
+        @media screen and (min-width: 769px) {
+            body {
+                color: #000000;
+            }
+            
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(2, auto);
+            }
+            
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        /* Мобильный - 1 колонка, КРАСНЫЙ текст */
+        @media screen and (max-width: 768px) {
+            body {
+                color: #cc0000;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+                margin-bottom: 30px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .card img {
+                width: 200px;
+            }
+            
+            .card p {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Планшет (опционально) - 2 колонки, СИНИЙ текст */
+        @media screen and (min-width: 481px) and (max-width: 768px) {
+            body {
+                color: #0066cc;
+            }
+            
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Заголовок сайта</h1>
+        
+        <div class="grid">
+            <div class="card">
+                <img src="десктоп.jpg" alt="Обезьянка с монетами">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia tortor nisl, sed faucibus mauris lacinia in. Duis sagittis hendrerit dui, eu dignissim dolor porttitor dignissim. Pellentesque auctor dignissim sapien. Pellentesque quis mauris turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus elementum viverra est, ut accumsan orci dapibus ac. Proin tincidunt consequat nisl, a blandit mauris hendrerit pharetra.</p>
+            </div>
+            
+            <div class="card">
+                <img src="мобайл.jpg" alt="Обезьянка с монетами">
+                <p>Nulla sit amet diam eget lacus aliquam iaculis ac et metus. Quisque eget tortor condimentum, semper felis quis, aliquet quam. Nam luctus laoreet dui nec tristique. Vestibulum in sollicitudin odio. Pellentesque malesuada nulla sit amet congue fermentum. Maecenas vehicula urna non libero rhoncus, vel sagittis tortor vehicula. Mauris faucibus sem id fermentum malesuada. Mauris mollis pellentesque sem, vitae cursus nulla posuere a. Vestibulum congue pellentesque elit, et bibendum ipsum aliquet id.</p>
+            </div>
+            
+            <div class="card">
+                <img src="десктоп.jpg" alt="Обезьянка с монетами">
+                <p>Maecenas tincidunt erat sit amet metus placerat, id porttitor tortor hendrerit. Maecenas at erat dolor. Nam imperdiet diam nec nibh vulputate finibus. Proin ut porta orci. Sed ac placerat lectus. Nunc non erat at dui vehicula sagittis eget a nunc. Ut cursus mauris vitae orci luctus feugiat. Donec ultricies nec nibh ac aliquam.</p>
+            </div>
+            
+            <div class="card">
+                <img src="мобайл.jpg" alt="Обезьянка с монетами">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam lacinia tortor nisl, sed faucibus mauris lacinia in. Duis sagittis hendrerit dui, eu dignissim dolor porttitor dignissim. Pellentesque auctor dignissim sapien. Pellentesque quis mauris turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+            </div>
+            
+            <div class="card">
+                <img src="десктоп.jpg" alt="Обезьянка с монетами">
+                <p>Nulla sit amet diam eget lacus aliquam iaculis ac et metus. Quisque eget tortor condimentum, semper felis quis, aliquet quam. Nam luctus laoreet dui nec tristique. Vestibulum in sollicitudin odio. Pellentesque malesuada nulla sit amet congue fermentum.</p>
+            </div>
+            
+            <div class="card">
+                <img src="мобайл.jpg" alt="Обезьянка с монетами">
+                <p>Maecenas tincidunt erat sit amet metus placerat, id porttitor tortor hendrerit. Maecenas at erat dolor. Nam imperdiet diam nec nibh vulputate finibus. Proin ut porta orci. Sed ac placerat lectus. Nunc non erat at dui vehicula sagittis eget a nunc.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
